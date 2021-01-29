@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+
 $(".saveBtn").on("click", function(){
         var saveText = $(this).siblings(".description").val();
         var saveHour = $(this).parent().attr("id");
@@ -45,18 +48,17 @@ $("#hour-16 .description").val(localStorage.getItem("hour-16"));
 $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
     //moment in time
-$("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a')); 
+$("#currentDay").text(moment().format('MMMM Do YYYY, h:mm a')); 
 
     // clear button
-$(".clear").on("click", function() {
-
-      clearCalendar();
-});
+// $(".clear").on("click", function() {
+//       clearCalendar();
+// });
     
-function clearCalendar() {
-        saveHour = 0;
-        saveText = 0;
+// function clearCalendar() {
+//         saveHour = 0;
+//         saveText = 0;
 
-        $(".description").empty();
-};
-
+//         $(".description").empty();
+// };
+});
